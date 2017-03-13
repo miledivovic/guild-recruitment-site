@@ -1,0 +1,27 @@
+{{#if officer}}
+{{#if app}}
+<div class="appForm">
+	<label>Character Name: {{app.CharacterName}}</label>
+	<br>
+	<label>Class: {{app.Class}}</label>
+	<br>
+	<label>Specialization: {{app.Specialization}}</label>
+	<br>
+	<label>ArmoryURL: {{app.ArmoryUrl}}</label>
+	<br>
+	<br>
+	<div>
+		<form class="appButtons" action="/sendDecline" method="post">
+			<input type="hidden" name="email" value={{app.Email}}>
+			<input type="submit" value="Decline" name="Decline">
+		</form>
+		<form class="appButtons" action="/sendAccept" method="post">
+			<input type="hidden" name="email" value={{app.Email}}>
+			<input type="submit" value="Accept" name="Accept">
+		</form>
+	</div>
+</div>
+{{/if}}
+{{else}}
+<h2> You do not have permission to view this page </h2>
+{{/if}}

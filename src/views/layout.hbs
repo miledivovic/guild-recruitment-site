@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+
+<title></title>
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
+</head>
+
+<body>
+	<div class="header">
+		<div class="title">
+			<h1 id="Title">Shattered Expectations</h1>
+		</div>
+
+		<div class="navBar">
+			<a class="navLinks" id="homeLink" href="/home">Home</a>
+			<a class="navLinks" id="applicationsLink" href="/applications">Applications</a>
+			<a class="navLinks" id="informationLink" href="/information">Information</a>
+		</div>
+
+		<div class="linkContainer">
+			{{#if user}}
+				Welcome {{user.Username}} <a class="navLinks" id="logoutLink" href="/logout">Logout</a>
+			{{else}}
+				<a class="navLinks" id="loginLink" href="/login">Login</a>
+				<a class="navLinks" id="registerLink" href="/register">Register</a>
+			{{/if}}
+		</div>
+	</div>
+	{{{body}}}
+</body>
+</html>

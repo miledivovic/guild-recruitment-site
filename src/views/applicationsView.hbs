@@ -1,0 +1,12 @@
+{{#if officer}}
+<div class="appForm">
+	<h2>Open Applications</h2>
+	{{#each apps}}
+	<div class="appInList">
+		<a href="details-{{slug}}">{{CharacterName}}</a>
+	</div>
+	{{/each}}
+</div>
+{{else}}
+<h2> You do not have permission to view this page </h2>
+{{/if}}
